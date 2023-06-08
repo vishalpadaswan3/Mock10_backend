@@ -16,7 +16,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-
+app.get('/', (req, res) => {
+    res.send("Mock 10 deployed backend");
+})
 
 const httpServer = http.createServer(app);
 app.use( userRouter);
